@@ -39,9 +39,12 @@ suspend fun main() {
         val user = ipc.userManager.getUser("843135686173392946")
         logger.info("User by ID: $user")
 
-        // Get the user's friend list
-        val relationships = ipc.relationshipManager.getRelationships()
-        logger.info("Relationships: ${relationships.size}")
+//        // Get the user's friend list
+//        val relationships = ipc.relationshipManager.getRelationships()
+//        logger.info("Relationships: ${relationships.size}")
+
+        val lobby = ipc.lobbyManager.createLobby(2, true)
+        logger.info("Created lobby of capacity ${lobby.capacity} with secret ${lobby.secret}")
     }
 
     ipc.on<ErrorEvent> {

@@ -34,6 +34,7 @@ class KDiscordIPC(private val clientID: String) {
 
     val activityManager = ActivityManager(this)
     val applicationManager = ApplicationManager(this)
+    val lobbyManager = LobbyManager(this)
     val relationshipManager = RelationshipManager(this)
     val userManager = UserManager(this)
     val voiceSettingsManager = VoiceSettingsManager(this)
